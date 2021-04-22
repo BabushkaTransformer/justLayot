@@ -1,0 +1,51 @@
+@import "./global_classes/global-classes.scss";
+@import "./color/colors";
+@import "./reset/reset-styles";
+
+@import "./bloks/header";
+@import "./bloks/banner";
+@import "./bloks/project";
+@import "./bloks/about";
+@import "./bloks/webinars";
+@import "./bloks/rewards";
+@import "./bloks/footer";
+
+// cursor classes================================
+.wrapper {
+	position: relative;
+}
+.cursor {
+	position: absolute;
+
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 2px solid #000;
+	pointer-events: none;
+
+	z-index: 9999;
+	transform: translate(-15px, -15px);
+	transform-origin: 100% 100%;
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+}
+.predator {
+	position: absolute;
+	transform: scale(2);
+	cursor: none !important;
+
+	body {
+		cursor: none !important;
+	}
+}
+.victim--color {
+	position: relative;
+	z-index: 221;
+}
+
+@media (max-width: 1020px) {
+	.cursor {
+		display: none;
+	}
+}
+// end cursor classes================================

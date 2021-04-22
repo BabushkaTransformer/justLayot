@@ -1,0 +1,226 @@
+// footer---------------------------------------
+// footer---------------------------------------
+
+.footer {
+	position: relative;
+	bottom: 0;
+	background-color: #191919;
+	z-index: 3;
+	overflow: hidden;
+
+	&__container {
+		position: relative;
+		display: flex;
+
+		height: 80vh;
+		width: calc(100% - 140px);
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-55%, -55%);
+
+		color: #101010;
+		font-weight: 900;
+		font-size: 26vw;
+		line-height: 0.95;
+
+		background: url(https://nikoland.ru/wp-content/themes/niko/images/sayhellow-txt.jpg)
+			no-repeat 50%;
+		background-size: 100% 100%;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+
+		z-index: 1;
+	}
+
+	// left=======================
+	&__left {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
+		margin-left: 12%;
+		z-index: 10;
+	}
+
+	&__contact {
+		position: relative;
+		display: block;
+		color: $white;
+		font-size: 80px;
+		font-weight: 700;
+		letter-spacing: 7px;
+		text-decoration: none;
+		user-select: none;
+	}
+
+	&__mail {
+		display: inline-block;
+		width: auto;
+		margin-top: 25px;
+
+		a {
+			font-size: 20px;
+			letter-spacing: 2px;
+			line-height: 1.4;
+			border-bottom: 1px dotted hsla(0, 0%, 100%, 0.47);
+			color: $white;
+			text-decoration: none;
+			transition: all 0.3s;
+			user-select: none;
+		}
+	}
+
+	// right===============================
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		flex-grow: 1;
+	}
+
+	&__rectangle {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+
+		transform: translateY(-50%);
+		width: 400px;
+		height: 500px;
+		max-height: calc(100vh - 200px);
+		border: 1px solid #888;
+
+		pointer-events: none;
+		transform-origin: center center;
+		transition: all 0.5s ease-in-out;
+		z-index: 20;
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: column;
+
+		.facebook,
+		.instagram,
+		.be {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			margin: 25px 0;
+
+			cursor: pointer;
+			fill: $white;
+			z-index: 3;
+		}
+	}
+}
+
+// media-=-=-=-=--=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+@media (max-width: 1115px) {
+	.footer {
+		&__contact {
+			font-size: 7vw;
+			letter-spacing: 5px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer {
+		&__container {
+			width: calc(100% - 70px);
+		}
+		&__left {
+			margin-left: 4%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		&__contact {
+			font-size: 30px;
+		}
+		&__left {
+			left: 2%;
+		}
+		&__social {
+			.facebook,
+			.instagram,
+			.be {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.footer {
+		&__container {
+			width: calc(100% - 40px);
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 100%;
+			padding: 0;
+		}
+		&__bg {
+			line-height: 1;
+			font-size: 40vw;
+		}
+
+		// left
+		&__left {
+			width: 100%;
+			height: auto;
+		}
+		&__contact {
+			font-size: 24px;
+			letter-spacing: 2px;
+		}
+		&__mail {
+			font-size: 14px;
+			margin: 0;
+		}
+		&__rectangle {
+			width: 200px;
+			height: 300px;
+		}
+
+		// right
+		&__right {
+			width: 100%;
+			justify-content: flex-start;
+			flex-grow: 0;
+		}
+		&__social {
+			width: 140px;
+			margin-top: 30px;
+			margin-left: 4%;
+			justify-content: space-between;
+			flex-direction: row;
+
+			.facebook,
+			.instagram,
+			.be {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+}
+
+// footer end---------------------------------------
+// footer end---------------------------------------
